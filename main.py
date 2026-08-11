@@ -778,7 +778,7 @@ def load_db():
 def hash_password(pw: str) -> str:
     return hashlib.sha256(f"{pw}{CONFIG['secret']}".encode()).hexdigest()
 
-AUTH = {"password_hash": hash_password("admin")}
+AUTH = {"password_hash": hash_password("123456")}
 
 
 async def create_session() -> str:
